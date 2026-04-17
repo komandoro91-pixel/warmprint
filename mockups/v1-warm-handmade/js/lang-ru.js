@@ -38,11 +38,10 @@ window.TRANSLATIONS.ru = {
     img1:    'Creeper Vase',
     img2:    'Diamond Pot',
     img3:    'Pickaxe Lamp',
-    img4:    'Enderman Frame',
+    img4:    'Enderman Figure',
     img5:    'Steve Head Box',
     img6:    'TNT Planter',
-    img7:    'Sword Stand',
-    img8:    'Pig Figurine'
+    img7:    'Sword Stand'
   },
   approach: {
     label:   'Наш подход',
