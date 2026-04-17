@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta -->
+  <title>warmprint — вещи, которые приносят радость и уют</title>
+  <meta name="description" content="Семейная мастерская 3D-печати. Уникальные изделия с душой — для дома, в подарок, под заказ. Minecraft-фигурки, органайзеры, декор. Каждая вещь сделана руками с любовью.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#3A4A3C">
+  <link rel="canonical" href="https://warmprint-v1.vercel.app/">
+
+  <!-- hreflang — SPA i18n via localStorage, all locales on root -->
+  <link rel="alternate" hreflang="ru" href="https://warmprint-v1.vercel.app/">
+  <link rel="alternate" hreflang="en" href="https://warmprint-v1.vercel.app/">
+  <link rel="alternate" hreflang="uk" href="https://warmprint-v1.vercel.app/">
+  <link rel="alternate" hreflang="x-default" href="https://warmprint-v1.vercel.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://warmprint-v1.vercel.app/">
+  <meta property="og:title" content="warmprint — вещи, которые приносят радость и уют">
+  <meta property="og:description" content="Семейная мастерская 3D-печати. Уникальные изделия с душой — для дома, в подарок, под заказ.">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta property="og:site_name" content="warmprint">
+  <meta property="og:image" content="https://warmprint-v1.vercel.app/og-default.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="warmprint — вещи, которые приносят радость и уют">
+  <meta name="twitter:description" content="Семейная мастерская 3D-печати. Уникальные изделия с душой — для дома, в подарок, под заказ.">
+  <meta name="twitter:image" content="https://warmprint-v1.vercel.app/og-default.svg">
+
+  <!-- Schema.org Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "warmprint",
+    "url": "https://warmprint-v1.vercel.app/",
+    "logo": "https://warmprint-v1.vercel.app/favicon.svg",
+    "description": "Семейная мастерская 3D-печати. Уникальные изделия с душой — для дома, в подарок, под заказ.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "hello@warmprint.store"
+    },
+    "sameAs": [
+      "https://t.me/warmprint",
+      "https://instagram.com/warmprint"
+    ]
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.svg">
+
+  <!-- Fonts — Fraunces (serif heading) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="#hero" class="header__logo">warm<span>print</span></a>
+
+        <nav class="nav" data-i18n-aria="misc.nav_aria" aria-label="Основная навигация">
+          <a href="#what"     class="nav__link" data-i18n="nav.what">Что делаем</a>
+          <a href="#gallery"  class="nav__link" data-i18n="nav.gallery">Галерея</a>
+          <a href="#approach" class="nav__link" data-i18n="nav.approach">Наш подход</a>
+          <a href="#order"    class="nav__link" data-i18n="nav.order">Как заказать</a>
+          <a href="#contacts" class="nav__link" data-i18n="nav.contacts">Контакты</a>
+        </nav>
+
+        <div class="header__right">
+          <a href="#contacts" class="btn btn-primary" data-i18n="header.cta">Написать нам</a>
+
+          <div class="lang-switcher" role="group" aria-label="Выбор языка">
+            <button class="lang-btn active" data-lang="ru">RU</button>
+            <button class="lang-btn"        data-lang="en">EN</button>
+            <button class="lang-btn"        data-lang="uk">UK</button>
+          </div>
+
+          <button class="burger" id="burger"
+                  data-i18n-aria="misc.menu_aria"
+                  aria-label="Открыть меню"
+                  aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Мобильное меню">
+    <a href="#what"     class="nav__link" data-i18n="nav.what">Что делаем</a>
+    <a href="#gallery"  class="nav__link" data-i18n="nav.gallery">Галерея</a>
+    <a href="#approach" class="nav__link" data-i18n="nav.approach">Наш подход</a>
+    <a href="#order"    class="nav__link" data-i18n="nav.order">Как заказать</a>
+    <a href="#contacts" class="nav__link" data-i18n="nav.contacts">Контакты</a>
+    <a href="#contacts" class="btn btn-primary" style="align-self:flex-start;margin-top:var(--space-2)" data-i18n="header.cta">Написать нам</a>
+  </nav>
+
+  <main>
+
+    <!-- ==================== 1. HERO ==================== -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero__inner">
+
+          <div class="hero__content">
+            <div class="hero__badge hero-anim-1">
+              <span class="hero__badge-dot" aria-hidden="true"></span>
+              <span class="section-label" data-i18n="hero.badge">Семейная мастерская 3D-печати</span>
+            </div>
+
+            <h1 class="hero__headline hero-anim-2" data-i18n-html="hero.headline">
+              Вещи, которые<br><em>приносят радость</em><br>и уют
+            </h1>
+
+            <p class="hero__sub hero-anim-3" data-i18n="hero.sub">
+              Делаем уникальные изделия с душой — для дома, в подарок, на заказ.
+              Каждая вещь создаётся руками, с любовью к деталям.
+            </p>
+
+            <div class="hero__actions hero-anim-4">
+              <a href="#contacts" class="btn btn-primary" data-i18n="hero.cta">Написать нам</a>
+              <a href="#gallery"  class="btn btn-outline" data-i18n="hero.cta2">Смотреть работы</a>
+            </div>
+          </div>
+
+          <!-- Hero image — Minecraft-themed placeholder (warm palette) -->
+          <div class="hero__visual hero-visual-anim" aria-hidden="true">
+            <img
+              class="hero__visual-img"
+              src="https://placehold.co/600x750/C8956D/FAF7F2?text=warmprint"
+              alt="Пример работы warmprint"
+              fetchpriority="high"
+              width="600"
+              height="750"
+            >
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. ЧТО МЫ ДЕЛАЕМ ==================== -->
+    <section class="section section--alt" id="what">
+      <div class="container">
+
+        <div class="section-header section-header--center fade-up">
+          <p class="section-label" data-i18n="what.label">Что мы делаем</p>
+          <div class="divider"></div>
+          <h2 data-i18n="what.title">Находим радость в деталях</h2>
+          <p class="lead" style="margin-inline:auto;margin-top:var(--space-4)" data-i18n="what.sub">Четыре направления — одна страсть к качеству</p>
+        </div>
+
+        <div class="categories__grid">
+          <div class="category-card fade-in-item stagger-1">
+            <div class="category-card__icon" aria-hidden="true">🏠</div>
+            <h3 class="category-card__title" data-i18n="what.home_title">Для дома</h3>
+            <p class="category-card__desc" data-i18n="what.home_desc">Вазы, органайзеры, подставки, декор — всё что делает дом уютнее</p>
+          </div>
+          <div class="category-card fade-in-item stagger-2">
+            <div class="category-card__icon" aria-hidden="true">🎁</div>
+            <h3 class="category-card__title" data-i18n="what.gift_title">В подарок</h3>
+            <p class="category-card__desc" data-i18n="what.gift_desc">Именные и тематические подарки, которые не пылятся на полке</p>
+          </div>
+          <div class="category-card fade-in-item stagger-3">
+            <div class="category-card__icon" aria-hidden="true">✏️</div>
+            <h3 class="category-card__title" data-i18n="what.custom_title">Под заказ</h3>
+            <p class="category-card__desc" data-i18n="what.custom_desc">Любая идея — от скетча до готового изделия в ваших руках</p>
+          </div>
+          <div class="category-card fade-in-item stagger-4">
+            <div class="category-card__icon" aria-hidden="true">🎮</div>
+            <h3 class="category-card__title" data-i18n="what.mood_title">Для настроения</h3>
+            <p class="category-card__desc" data-i18n="what.mood_desc">Minecraft-фигурки, арт-объекты, нестандартные вещи с характером</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 3. ГАЛЕРЕЯ ==================== -->
+    <section class="section" id="gallery">
+      <div class="container">
+
+        <div class="section-header section-header--center fade-up">
+          <p class="section-label" data-i18n="gallery.label">Наши работы</p>
+          <div class="divider"></div>
+          <h2 data-i18n="gallery.title">Каждая вещь — история</h2>
+          <p class="lead" style="margin-inline:auto;margin-top:var(--space-4)" data-i18n="gallery.sub">Нажмите на фото, чтобы рассмотреть детали</p>
+        </div>
+
+        <div class="gallery__grid">
+
+          <div class="gallery__item fade-in-item stagger-1">
+            <img class="gallery__item-img" loading="lazy"
+              src="https://placehold.co/800x800/C8956D/FAF7F2?text=Creeper"
+              alt="Creeper Vase">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-caption" data-i18n="gallery.img1">Creeper Vase</span>
+            </div>
+          </div>
+
+          <div class="gallery__item fade-in-item stagger-2">
+            <img class="gallery__item-img" loading="lazy"
+              src="https://placehold.co/800x800/5B8A6A/FAF7F2?text=Diamond"
+              alt="Diamond Pot">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-caption" data-i18n="gallery.img2">Diamond Pot</span>
+            </div>
+          </div>
+
+          <div class="gallery__item fade-in-item stagger-3">
+            <img class="gallery__item-img" loading="lazy"
+              src="https://placehold.co/800x800/A0855C/FAF7F2?text=Pickaxe"
+              alt="Pickaxe Lamp">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-caption" data-i18n="gallery.img3">Pickaxe Lamp</span>
+            </div>
+          </div>
+
+          <div class="gallery__item fade-in-item stagger-4">
+            <img class="gallery__item-img" loading="lazy"
+              src="https://placehold.co/800x800/3A4A3C/FAF7F2?text=Enderman"
+              alt="Enderman Frame">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-caption" data-i18n="gallery.img4">Enderman Frame</span>
+            </div>
+          </div>
+
+          <div class="gallery__item fade-in-item stagger-5">
+            <img class="gallery__item-img" loading="lazy"
+              src="https://placehold.co/800x800/DDB08E/3A4A3C?text=Steve"
+              alt="Steve Head Box">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-caption" data-i18n="gallery.img5">Steve Head Box</span>
+            </div>
+          </div>
+
+          <div class="gallery__item fade-in-item stagger-6">
+            <img class="gallery__item-img" loading="lazy"
+              src="https://placehold.co/800x800/C04A4A/FAF7F2?text=TNT"
+              alt="TNT Planter">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-caption" data-i18n="gallery.img6">TNT Planter</span>
+            </div>
+          </div>
+
+          <div class="gallery__item fade-in-item stagger-7">
+            <img class="gallery__item-img" loading="lazy"
+              src="https://placehold.co/800x800/7A6548/FAF7F2?text=Sword"
+              alt="Sword Stand">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-caption" data-i18n="gallery.img7">Sword Stand</span>
+            </div>
+          </div>
+
+          <div class="gallery__item fade-in-item stagger-8">
+            <img class="gallery__item-img" loading="lazy"
+              src="https://placehold.co/800x800/E8B4A0/3A4A3C?text=Pig"
+              alt="Pig Figurine">
+            <div class="gallery__item-overlay">
+              <span class="gallery__item-caption" data-i18n="gallery.img8">Pig Figurine</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фото">
+      <div class="lightbox__inner">
+        <button class="lightbox__close" id="lbClose" data-i18n-aria="misc.close_aria" aria-label="Закрыть">&#x2715;</button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" data-i18n-aria="misc.prev_aria" aria-label="Предыдущее">&#8592;</button>
+        <img class="lightbox__img" id="lbImg" src="" alt="">
+        <button class="lightbox__nav lightbox__nav--next" id="lbNext" data-i18n-aria="misc.next_aria" aria-label="Следующее">&#8594;</button>
+        <p class="lightbox__caption" id="lbCaption"></p>
+      </div>
+    </div>
+
+    <!-- ==================== 4. НАШ ПОДХОД ==================== -->
+    <section class="section section--alt" id="approach">
+      <div class="container">
+        <div class="approach__inner">
+
+          <div class="approach__visual fade-left">
+            <img
+              src="https://placehold.co/600x600/3A4A3C/FAF7F2?text=Our+Studio"
+              alt="Наша мастерская"
+              loading="lazy"
+              width="600"
+              height="600"
+            >
+          </div>
+
+          <div class="approach__text fade-right">
+            <p class="section-label" data-i18n="approach.label">Наш подход</p>
+            <div class="divider"></div>
+            <h2 style="margin-bottom:var(--space-8)" data-i18n="approach.title">Семья, которая делает с душой</h2>
+            <p data-i18n="approach.p1">
+              Мы — небольшая семейная мастерская. Мама проектирует и раскрашивает,
+              папа за принтером и техникой, дети — главные тестировщики и источник идей.
+              Каждое изделие проходит через наши руки несколько раз, прежде чем попасть к вам.
+            </p>
+            <p data-i18n="approach.p2">
+              Мы не гонимся за объёмом. Нам важно, чтобы вещь, которую вы получите,
+              вызвала улыбку — при распаковке, при взгляде с полки, при каждом использовании.
+              Именно поэтому мы работаем с качественными материалами и не торопимся.
+            </p>
+            <p data-i18n="approach.p3">
+              Если у вас есть идея — расскажите нам. Мы любим нестандартные запросы
+              и почти всегда находим способ воплотить задуманное. Это и есть наша любимая часть работы.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. КАК ЗАКАЗАТЬ ==================== -->
+    <section class="section" id="order">
+      <div class="container">
+
+        <div class="section-header section-header--center fade-up">
+          <p class="section-label" data-i18n="steps.label">Как заказать</p>
+          <div class="divider"></div>
+          <h2 data-i18n="steps.title">Просто напишите нам</h2>
+          <p class="lead" style="margin-inline:auto;margin-top:var(--space-4)" data-i18n="steps.sub">Три шага — и уникальная вещь у вас в руках</p>
+        </div>
+
+        <div class="steps__grid">
+
+          <div class="step-card fade-up">
+            <div class="step-card__num" aria-hidden="true">01</div>
+            <div class="step-card__content">
+              <h3 class="step-card__title" data-i18n="steps.s1_title">Написать</h3>
+              <p class="step-card__desc" data-i18n="steps.s1_desc">
+                Напишите в Telegram или Instagram — опишите что хотите,
+                прикрепите референс или просто объясните идею словами
+              </p>
+            </div>
+          </div>
+
+          <div class="steps__connector" aria-hidden="true"></div>
+
+          <div class="step-card fade-up">
+            <div class="step-card__num" aria-hidden="true">02</div>
+            <div class="step-card__content">
+              <h3 class="step-card__title" data-i18n="steps.s2_title">Обсудить идею</h3>
+              <p class="step-card__desc" data-i18n="steps.s2_desc">
+                Мы ответим в течение нескольких часов, уточним детали,
+                предложим варианты и назовём стоимость и сроки
+              </p>
+            </div>
+          </div>
+
+          <div class="steps__connector" aria-hidden="true"></div>
+
+          <div class="step-card fade-up">
+            <div class="step-card__num" aria-hidden="true">03</div>
+            <div class="step-card__content">
+              <h3 class="step-card__title" data-i18n="steps.s3_title">Получить результат</h3>
+              <p class="step-card__desc" data-i18n="steps.s3_desc">
+                Мы изготовим изделие, сфотографируем перед отправкой
+                и доставим удобным вам способом
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 6. ОТЗЫВЫ ==================== -->
+    <section class="section section--alt" id="reviews">
+      <div class="container">
+
+        <div class="section-header section-header--center fade-up">
+          <p class="section-label" data-i18n="reviews.label">Отзывы</p>
+          <div class="divider"></div>
+          <h2 data-i18n="reviews.title">Говорят наши клиенты</h2>
+        </div>
+
+        <div class="reviews__grid">
+
+          <div class="review-card fade-in-item stagger-1">
+            <div class="review-card__quote" aria-hidden="true">"</div>
+            <p class="review-card__text" data-i18n="reviews.r1_text">
+              Заказывала вазу под конкретный интерьер — сделали именно то, что я хотела,
+              даже лучше. Очень внимательные ребята, все согласовали заранее.
+            </p>
+            <p class="review-card__author" data-i18n="reviews.r1_name">Анна К.</p>
+            <p class="review-card__city"   data-i18n="reviews.r1_city">Москва</p>
+          </div>
+
+          <div class="review-card fade-in-item stagger-2">
+            <div class="review-card__quote" aria-hidden="true">"</div>
+            <p class="review-card__text" data-i18n="reviews.r2_text">
+              Creeper-горшок для кактуса — моему сыну-геймеру это лучший подарок на день рождения.
+              Качество отличное, всё ровно и аккуратно.
+            </p>
+            <p class="review-card__author" data-i18n="reviews.r2_name">Дмитрий В.</p>
+            <p class="review-card__city"   data-i18n="reviews.r2_city">Санкт-Петербург</p>
+          </div>
+
+          <div class="review-card fade-in-item stagger-3">
+            <div class="review-card__quote" aria-hidden="true">"</div>
+            <p class="review-card__text" data-i18n="reviews.r3_text">
+              Брала органайзер на стол. Быстро, аккуратно, всё как на фото.
+              Буду ещё заказывать — уже присматриваю подарки на Новый год.
+            </p>
+            <p class="review-card__author" data-i18n="reviews.r3_name">Мария Л.</p>
+            <p class="review-card__city"   data-i18n="reviews.r3_city">Екатеринбург</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 7. КОНТАКТЫ + ФОРМА ==================== -->
+    <section class="section" id="contacts">
+      <div class="container">
+
+        <div class="contacts__inner">
+
+          <!-- Left: info -->
+          <div class="contacts__info fade-left">
+            <div>
+              <p class="section-label" data-i18n="contacts.label">Контакты</p>
+              <div class="divider"></div>
+              <h2 data-i18n="contacts.title">Напишите нам</h2>
+              <p class="lead" style="margin-top:var(--space-5)" data-i18n="contacts.sub">
+                Отвечаем в Telegram и Instagram. Любые вопросы — пишите смело.
+              </p>
+            </div>
+
+            <div class="contacts__list">
+              <div class="contact-item">
+                <div class="contact-item__icon" aria-hidden="true">✈️</div>
+                <div>
+                  <p class="contact-item__label" data-i18n="contacts.tg_label">Telegram</p>
+                  <p class="contact-item__value">
+                    <a href="https://t.me/warmprint" target="_blank" rel="noopener">@warmprint</a>
+                  </p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item__icon" aria-hidden="true">📷</div>
+                <div>
+                  <p class="contact-item__label" data-i18n="contacts.ig_label">Instagram</p>
+                  <p class="contact-item__value">
+                    <a href="https://instagram.com/warmprint" target="_blank" rel="noopener">@warmprint</a>
+                  </p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item__icon" aria-hidden="true">✉️</div>
+                <div>
+                  <p class="contact-item__label" data-i18n="contacts.em_label">Email</p>
+                  <p class="contact-item__value">
+                    <a href="mailto:hello@warmprint.store">hello@warmprint.store</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contacts__social">
+              <a href="https://t.me/warmprint" target="_blank" rel="noopener"
+                 class="social-btn" aria-label="Telegram">
+                ✈️
+              </a>
+              <a href="https://instagram.com/warmprint" target="_blank" rel="noopener"
+                 class="social-btn" aria-label="Instagram">
+                📷
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: form -->
+          <div class="contacts__form-wrap fade-right">
+            <h3 class="contacts__form-title" data-i18n="form.title">Оставить заявку</h3>
+
+            <!-- Form wrap (hidden after success) -->
+            <div id="leadFormWrap">
+              <form id="leadForm" class="lead-form" novalidate>
+
+                <div class="form-group">
+                  <label class="form-label" for="fieldName">
+                    <span data-i18n="form.name_label">Ваше имя</span><span aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="fieldName"
+                    name="name"
+                    class="form-input"
+                    required
+                    autocomplete="given-name"
+                    data-i18n-placeholder="form.name_ph"
+                    placeholder="Как вас зовут?"
+                    aria-required="true"
+                    aria-describedby="errName"
+                  >
+                  <span class="form-error" id="errName" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="fieldContact">
+                    <span data-i18n="form.contact_label">Контакт</span><span aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="fieldContact"
+                    name="contact"
+                    class="form-input"
+                    required
+                    autocomplete="off"
+                    data-i18n-placeholder="form.contact_ph"
+                    placeholder="Telegram, WhatsApp или email"
+                    aria-required="true"
+                    aria-describedby="errContact"
+                  >
+                  <span class="form-error" id="errContact" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="fieldInterest">
+                    <span data-i18n="form.interest_label">Что интересует</span>
+                  </label>
+                  <select id="fieldInterest" name="interest" class="form-select">
+                    <option value="ready"  data-i18n-opt="form.opt_ready">Готовое изделие</option>
+                    <option value="custom" data-i18n-opt="form.opt_custom">Идея на заказ</option>
+                    <option value="ask"    data-i18n-opt="form.opt_ask">Просто хочу спросить</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="fieldMessage">
+                    <span data-i18n="form.msg_label">Сообщение</span>
+                  </label>
+                  <textarea
+                    id="fieldMessage"
+                    name="message"
+                    class="form-textarea"
+                    rows="4"
+                    data-i18n-placeholder="form.msg_ph"
+                    placeholder="Расскажите подробнее — что хотите, для кого, какие цвета..."
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="align-self:flex-start">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                  <span data-i18n="form.submit">Отправить</span>
+                </button>
+
+              </form>
+            </div>
+
+            <!-- Success screen -->
+            <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+              <div class="form-success__icon" aria-hidden="true">✓</div>
+              <h3 class="form-success__title" data-i18n="form.success_title">Отлично, ждите нас!</h3>
+              <p class="form-success__sub" data-i18n="form.success_sub">Мы получили вашу заявку и напишем в ближайшее время.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== 8. FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo">warm<span>print</span></span>
+        <p class="footer__copy" data-i18n="footer.copy">© 2024 warmprint — семейная мастерская</p>
+        <div class="footer__social">
+          <a href="https://t.me/warmprint" target="_blank" rel="noopener"
+             class="footer__social-btn" aria-label="Telegram">✈️</a>
+          <a href="https://instagram.com/warmprint" target="_blank" rel="noopener"
+             class="footer__social-btn" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: config → lang-* → i18n → app → gallery → form -->
+  <script src="js/config.js"  defer></script>
+  <script src="js/lang-ru.js" defer></script>
+  <script src="js/lang-en.js" defer></script>
+  <script src="js/lang-uk.js" defer></script>
+  <script src="js/i18n.js"    defer></script>
+  <script src="js/app.js"     defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/form.js"    defer></script>
+
+</body>
+</html>

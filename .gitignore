@@ -1,0 +1,26 @@
+# Planning (GSD artifacts — local only)
+.planning/
+
+# Python
+.ruff_cache/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+.next/
+.vercel/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs / env
+*.log
+.env
+.env.local

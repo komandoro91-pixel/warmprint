@@ -1,0 +1,121 @@
+/* ============================================================
+   warmprint — Animations & Motion
+   ============================================================ */
+
+/* ---- Keyframes ---- */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.3); opacity: 0.65; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+/* ---- Scroll-reveal: initial state ---- */
+
+.fade-up,
+.fade-left,
+.fade-right,
+.fade-in-item {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.fade-up      { transform: translateY(32px); }
+.fade-left    { transform: translateX(-32px); }
+.fade-right   { transform: translateX(32px); }
+.fade-in-item { transform: translateY(16px); }
+
+/* Revealed state — set by IntersectionObserver */
+.revealed {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: opacity var(--duration-slow) var(--ease-out-expo),
+              transform var(--duration-slow) var(--ease-out-expo);
+}
+
+/* Stagger delays for grids */
+.stagger-1 { transition-delay: 0ms !important; }
+.stagger-2 { transition-delay: 80ms !important; }
+.stagger-3 { transition-delay: 160ms !important; }
+.stagger-4 { transition-delay: 240ms !important; }
+.stagger-5 { transition-delay: 320ms !important; }
+.stagger-6 { transition-delay: 400ms !important; }
+.stagger-7 { transition-delay: 480ms !important; }
+.stagger-8 { transition-delay: 560ms !important; }
+
+/* Hero immediate animations (no observer needed) */
+.hero-anim-1 { animation: fadeInUp var(--duration-slow) var(--ease-out-expo) 0ms   both; }
+.hero-anim-2 { animation: fadeInUp var(--duration-slow) var(--ease-out-expo) 100ms both; }
+.hero-anim-3 { animation: fadeInUp var(--duration-slow) var(--ease-out-expo) 200ms both; }
+.hero-anim-4 { animation: fadeInUp var(--duration-slow) var(--ease-out-expo) 300ms both; }
+.hero-visual-anim { animation: fadeInRight var(--duration-xslow) var(--ease-out-expo) 150ms both; }
+
+/* Float animation for hero deco */
+.deco-float {
+  animation: float 6s var(--ease-in-out) infinite;
+}
+
+/* ---- Reduced motion ---- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-up,
+  .fade-left,
+  .fade-right,
+  .fade-in-item {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-anim-1,
+  .hero-anim-2,
+  .hero-anim-3,
+  .hero-anim-4,
+  .hero-visual-anim {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

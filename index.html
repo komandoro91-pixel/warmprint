@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>warmprint — выбор направления</title>
+<meta name="description" content="Два варианта визуальной концепции для сайта-визитки семейного бизнеса 3D-печати.">
+<meta name="theme-color" content="#2B2B2B">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FAF7F2 0%, #FAF7F2 50%, #1C1B17 50%, #1C1B17 100%);
+    color: #2B2B2B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 24px;
+    gap: 48px;
+  }
+  header { text-align: center; max-width: 640px; }
+  header h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 4vw + 1rem, 3rem);
+    margin: 0 0 12px;
+    color: #2B2B2B;
+    letter-spacing: -0.02em;
+  }
+  header p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #6F6F6F;
+    margin: 0;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    width: 100%;
+    max-width: 1040px;
+  }
+  @media (min-width: 720px) {
+    .grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    min-height: 380px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
+  }
+  .card .label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    opacity: 0.7;
+  }
+  .card h2 {
+    font-size: clamp(1.75rem, 2.5vw + 1rem, 2.5rem);
+    margin: 0 0 16px;
+    letter-spacing: -0.02em;
+  }
+  .card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 auto;
+    opacity: 0.85;
+  }
+  .card .meta {
+    margin-top: 32px;
+    font-size: 0.875rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+  .card .meta span::before { content: "· "; opacity: 0.5; margin-right: 4px; }
+  .card .meta span:first-child::before { content: ""; margin: 0; }
+  .card .arrow {
+    margin-top: 24px;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.2s ease;
+  }
+  .card:hover .arrow { gap: 12px; }
+
+  /* V1 — warm handmade */
+  .v1 {
+    background: #FAF7F2;
+    color: #2B2B2B;
+    border: 1px solid rgba(58, 74, 60, 0.12);
+  }
+  .v1 h2 { font-family: 'Fraunces', serif; font-weight: 500; color: #3A4A3C; }
+  .v1 h2 em { color: #C8956D; font-style: italic; font-weight: 500; }
+  .v1 .label { color: #3A4A3C; }
+  .v1 .arrow { color: #3A4A3C; }
+
+  /* V2 — editorial dark */
+  .v2 {
+    background: #1C1B17;
+    color: #E8E2D5;
+    border: 1px solid #3A3832;
+  }
+  .v2 h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; color: #E8E2D5; }
+  .v2 h2 em { color: #B8935A; font-style: italic; font-weight: 600; }
+  .v2 .label { color: #B8935A; }
+  .v2 .arrow { color: #B8935A; }
+  .v2 p { color: #8B8578; }
+
+  footer {
+    text-align: center;
+    color: #8B8578;
+    font-size: 0.8125rem;
+    padding: 32px 0;
+    max-width: 640px;
+  }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>warmprint</h1>
+    <p>Два направления визуальной концепции. Выбери какое ближе — потом доведём до финала.</p>
+  </header>
+
+  <main class="grid">
+    <a href="./mockups/v1-warm-handmade/" class="card v1" aria-label="Открыть вариант V1 — Warm Handmade">
+      <span class="label">Вариант 01</span>
+      <h2>Warm<br><em>Handmade</em></h2>
+      <p>Кремовая палитра, мягкие serif-заголовки, spacious airy layout. Тёплые тени, органические формы, фокус на эмоции и текстуру.</p>
+      <div class="meta">
+        <span>Fraunces</span>
+        <span>Inter</span>
+        <span>Cream + Sage + Terracotta</span>
+      </div>
+      <span class="arrow">Посмотреть V1 →</span>
+    </a>
+
+    <a href="./mockups/v2-editorial-dark/" class="card v2" aria-label="Открыть вариант V2 — Editorial Dark Artisan">
+      <span class="label">Вариант 02</span>
+      <h2>Editorial<br><em>Dark</em></h2>
+      <p>Тёмная премиум-палитра, крупная Cormorant-типографика, magazine-grid. Брасс-акценты, asymmetric layout, narrative-подача.</p>
+      <div class="meta">
+        <span>Cormorant</span>
+        <span>Inter</span>
+        <span>Charcoal + Cream + Brass</span>
+      </div>
+      <span class="arrow">Посмотреть V2 →</span>
+    </a>
+  </main>
+
+  <footer>
+    Сайт-визитка семейного 3D-печати · mockups в разработке · <a href="https://github.com/komandoro91-pixel/warmprint">GitHub</a>
+  </footer>
+</body>
+</html>

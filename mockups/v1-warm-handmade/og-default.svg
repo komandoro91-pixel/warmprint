@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#FAF7F2"/>
+  <!-- Subtle warm accent strip -->
+  <rect x="0" y="0" width="8" height="630" fill="#3A4A3C"/>
+  <!-- Decorative circle -->
+  <circle cx="980" cy="315" r="260" fill="#3A4A3C" opacity="0.06"/>
+  <circle cx="980" cy="315" r="180" fill="#3A4A3C" opacity="0.06"/>
+  <!-- Logo wordmark -->
+  <text x="100" y="300" font-family="Georgia, 'Times New Roman', serif" font-size="112" font-weight="400" fill="#3A4A3C" letter-spacing="-2">warmprint</text>
+  <!-- Tagline -->
+  <text x="104" y="380" font-family="Georgia, 'Times New Roman', serif" font-size="36" fill="#A0855C" letter-spacing="0">вещи, которые приносят радость и уют</text>
+  <!-- Bottom label -->
+  <text x="104" y="558" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="22" fill="#3A4A3C" opacity="0.45" letter-spacing="2">СЕМЕЙНАЯ МАСТЕРСКАЯ 3D-ПЕЧАТИ</text>
+  <!-- Warm dot accent -->
+  <circle cx="104" cy="472" r="6" fill="#C8956D"/>
+  <line x1="124" y1="472" x2="380" y2="472" stroke="#C8956D" stroke-width="1.5" opacity="0.4"/>
+</svg>

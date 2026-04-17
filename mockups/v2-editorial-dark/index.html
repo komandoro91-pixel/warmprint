@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta -->
+  <title>warmprint — не количество, качество и эмоции</title>
+  <meta name="description" content="warmprint — семейная мастерская editorial 3D-печати. Авторские изделия ручной работы: визитки, декор, подарки. Не поток — каждая вещь с душой.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1C1B17">
+  <link rel="canonical" href="https://warmprint-v2.vercel.app/">
+
+  <!-- hreflang — SPA i18n via localStorage -->
+  <link rel="alternate" hreflang="ru" href="https://warmprint-v2.vercel.app/">
+  <link rel="alternate" hreflang="en" href="https://warmprint-v2.vercel.app/">
+  <link rel="alternate" hreflang="uk" href="https://warmprint-v2.vercel.app/">
+  <link rel="alternate" hreflang="x-default" href="https://warmprint-v2.vercel.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://warmprint-v2.vercel.app/">
+  <meta property="og:title" content="warmprint — не количество, качество и эмоции">
+  <meta property="og:description" content="Семейная мастерская editorial 3D-печати. Авторские изделия ручной работы: декор, подарки, печать на заказ. Каждая вещь с душой.">
+  <meta property="og:image" content="https://warmprint-v2.vercel.app/og-default.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta property="og:site_name" content="warmprint">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="warmprint — не количество, качество и эмоции">
+  <meta name="twitter:description" content="Семейная мастерская editorial 3D-печати. Авторские изделия ручной работы.">
+  <meta name="twitter:image" content="https://warmprint-v2.vercel.app/og-default.svg">
+
+  <!-- Schema.org Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "warmprint",
+    "url": "https://warmprint-v2.vercel.app/",
+    "logo": "https://warmprint-v2.vercel.app/favicon.svg",
+    "description": "Семейная мастерская editorial 3D-печати. Авторские изделия ручной работы — декор, подарки, печать на заказ.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "hello@warmprint.studio"
+    },
+    "sameAs": [
+      "https://t.me/warmprint",
+      "https://instagram.com/warmprint.studio"
+    ]
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+
+        <a href="#hero" class="header__logo">warm<span>print</span></a>
+
+        <nav class="nav" aria-label="Основная навигация">
+          <a href="#what"     class="nav__link" data-i18n="nav.what">Что мы делаем</a>
+          <a href="#gallery"  class="nav__link" data-i18n="nav.gallery">Галерея</a>
+          <a href="#approach" class="nav__link" data-i18n="nav.approach">Наш подход</a>
+          <a href="#how"      class="nav__link" data-i18n="nav.how">Как заказать</a>
+          <a href="#contacts" class="nav__link" data-i18n="nav.contacts">Контакты</a>
+        </nav>
+
+        <div class="header__right">
+          <div class="lang-switcher" role="group" aria-label="Выбор языка">
+            <button class="lang-btn active" data-lang="ru">RU</button>
+            <span class="lang-separator" aria-hidden="true"></span>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <span class="lang-separator" aria-hidden="true"></span>
+            <button class="lang-btn" data-lang="uk">UK</button>
+          </div>
+
+          <button class="burger" id="burger" aria-expanded="false" aria-label="Меню">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Мобильное меню">
+    <a href="#what"     class="nav__link" data-i18n="nav.what">Что мы делаем</a>
+    <a href="#gallery"  class="nav__link" data-i18n="nav.gallery">Галерея</a>
+    <a href="#approach" class="nav__link" data-i18n="nav.approach">Наш подход</a>
+    <a href="#how"      class="nav__link" data-i18n="nav.how">Как заказать</a>
+    <a href="#contacts" class="nav__link" data-i18n="nav.contacts">Контакты</a>
+  </div>
+
+  <main>
+
+    <!-- ==================== 1. HERO ==================== -->
+    <section id="hero" class="hero">
+      <div class="hero__split">
+
+        <!-- Left: vertical editorial headline -->
+        <div class="hero__left">
+
+          <div class="hero__eyebrow hero-enter">
+            <span class="section-label" data-i18n="hero.badge">Семейная мастерская 3D-печати</span>
+          </div>
+
+          <h1 class="hero__headline">
+            <span class="headline-line">
+              <span class="headline-line-inner" data-i18n="hero.headline_1">Не</span>
+            </span>
+            <span class="headline-line">
+              <span class="headline-line-inner" data-i18n="hero.headline_2">количество</span>
+            </span>
+            <span class="headline-line">
+              <span class="headline-line-inner line-accent" data-i18n="hero.headline_3">— качество</span>
+            </span>
+            <span class="headline-line">
+              <span class="headline-line-inner line-outline" data-i18n="hero.headline_4">и эмоции</span>
+            </span>
+          </h1>
+
+          <p class="hero__sub hero-enter hero-enter-delay-3" data-i18n="hero.sub">
+            Каждое изделие — ручная работа с душой. Мы не печатаем на потоке. Мы создаём вещи, которые остаются.
+          </p>
+
+          <div class="hero__actions hero-enter hero-enter-delay-4">
+            <a href="#contacts" class="btn btn-primary" data-i18n="hero.cta">Написать нам</a>
+            <a href="#gallery"  class="btn btn-outline" data-i18n="hero.cta2">Смотреть работы</a>
+          </div>
+
+        </div>
+
+        <!-- Right: photo with brass frame -->
+        <div class="hero__right hero-enter hero-enter-delay-2">
+          <div class="hero__photo-wrap">
+            <span class="brass-frame">
+              <img
+                src="https://placehold.co/480x640/24221E/B8935A?text=warmprint"
+                alt="Изделие мастерской warmprint"
+                loading="eager"
+                width="480"
+                height="640"
+              >
+            </span>
+            <div class="hero__photo-label" data-i18n="hero.photo_label">Наши работы</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 2. WHAT WE DO ==================== -->
+    <section id="what" class="what-section section">
+      <div class="container">
+
+        <div class="what-section__header">
+          <div>
+            <span class="section-label reveal" data-i18n="what.label">Что мы делаем</span>
+            <h2 class="what-section__title reveal delay-1" data-i18n="what.title">Печатаем с душой</h2>
+          </div>
+          <p class="what-section__desc reveal delay-2" data-i18n="what.desc">
+            Четыре направления — от уютных домашних вещей до персональных подарков и изделий на заказ.
+          </p>
+        </div>
+
+        <div class="what-grid">
+
+          <!-- 01 Для дома -->
+          <div class="what-item reveal">
+            <span class="what-item__num" data-i18n="what.item1_num">01</span>
+            <img
+              class="what-item__img"
+              src="https://placehold.co/600x450/1C1B17/B8935A?text=Для+дома"
+              alt="Изделия для дома"
+              loading="lazy"
+              width="600"
+              height="450"
+            >
+            <div>
+              <h3 class="what-item__title" data-i18n="what.item1_title">Для дома</h3>
+              <p class="what-item__desc" data-i18n="what.item1_desc">
+                Вазы, органайзеры, декор и всё, что делает пространство живым и тёплым.
+              </p>
+            </div>
+          </div>
+
+          <!-- 02 В подарок -->
+          <div class="what-item reveal delay-1">
+            <span class="what-item__num" data-i18n="what.item2_num">02</span>
+            <img
+              class="what-item__img"
+              src="https://placehold.co/600x450/1C1B17/B8935A?text=В+подарок"
+              alt="Изделия в подарок"
+              loading="lazy"
+              width="600"
+              height="450"
+            >
+            <div>
+              <h3 class="what-item__title" data-i18n="what.item2_title">В подарок</h3>
+              <p class="what-item__desc" data-i18n="what.item2_desc">
+                Уникальные изделия, которые не купишь в магазине. Подарок с историей.
+              </p>
+            </div>
+          </div>
+
+          <!-- 03 Под заказ -->
+          <div class="what-item reveal delay-2">
+            <span class="what-item__num" data-i18n="what.item3_num">03</span>
+            <img
+              class="what-item__img"
+              src="https://placehold.co/600x450/1C1B17/B8935A?text=Под+заказ"
+              alt="Изделия на заказ"
+              loading="lazy"
+              width="600"
+              height="450"
+            >
+            <div>
+              <h3 class="what-item__title" data-i18n="what.item3_title">Под заказ</h3>
+              <p class="what-item__desc" data-i18n="what.item3_desc">
+                Ваша идея — наши руки. Обсудим, напечатаем, доставим.
+              </p>
+            </div>
+          </div>
+
+          <!-- 04 Для настроения -->
+          <div class="what-item reveal delay-3">
+            <span class="what-item__num" data-i18n="what.item4_num">04</span>
+            <img
+              class="what-item__img"
+              src="https://placehold.co/600x450/1C1B17/B8935A?text=Для+настроения"
+              alt="Изделия для настроения"
+              loading="lazy"
+              width="600"
+              height="450"
+            >
+            <div>
+              <h3 class="what-item__title" data-i18n="what.item4_title">Для настроения</h3>
+              <p class="what-item__desc" data-i18n="what.item4_desc">
+                Фигурки, арт-объекты и маленькие радости без повода.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. GALLERY ==================== -->
+    <section id="gallery" class="gallery-section section">
+      <div class="container">
+
+        <div class="gallery-section__header">
+          <div>
+            <span class="section-label reveal" data-i18n="gallery.label">Галерея работ</span>
+            <h2 class="reveal delay-1" data-i18n="gallery.title">Избранное</h2>
+          </div>
+          <p class="reveal delay-2" data-i18n="gallery.desc">Реальные изделия из нашей мастерской</p>
+        </div>
+
+        <div class="gallery-grid" role="list">
+
+          <a class="gallery-item reveal"
+             data-src="https://placehold.co/800x600/24221E/B8935A?text=Creeper+Vase"
+             data-caption="Creeper Vase"
+             role="listitem"
+             aria-label="Открыть фото: Creeper Vase">
+            <img
+              src="https://placehold.co/800x600/24221E/B8935A?text=Creeper+Vase"
+              alt="Creeper Vase — ваза в стиле Minecraft"
+              loading="lazy"
+              width="800" height="600"
+            >
+            <div class="gallery-item__overlay" aria-hidden="true">
+              <span class="gallery-item__caption" data-i18n="gallery.item1">Creeper Vase</span>
+            </div>
+          </a>
+
+          <a class="gallery-item reveal delay-1"
+             data-src="https://placehold.co/800x1000/24221E/B8935A?text=Diamond+Pot"
+             data-caption="Diamond Pot"
+             role="listitem"
+             aria-label="Открыть фото: Diamond Pot">
+            <img
+              src="https://placehold.co/800x1000/24221E/B8935A?text=Diamond+Pot"
+              alt="Diamond Pot — горшок Diamond Block"
+              loading="lazy"
+              width="800" height="1000"
+            >
+            <div class="gallery-item__overlay" aria-hidden="true">
+              <span class="gallery-item__caption" data-i18n="gallery.item2">Diamond Pot</span>
+            </div>
+          </a>
+
+          <a class="gallery-item reveal delay-2"
+             data-src="https://placehold.co/800x600/1C1B17/B8935A?text=Pickaxe+Lamp"
+             data-caption="Pickaxe Lamp"
+             role="listitem"
+             aria-label="Открыть фото: Pickaxe Lamp">
+            <img
+              src="https://placehold.co/800x600/1C1B17/B8935A?text=Pickaxe+Lamp"
+              alt="Pickaxe Lamp — лампа-кирка"
+              loading="lazy"
+              width="800" height="600"
+            >
+            <div class="gallery-item__overlay" aria-hidden="true">
+              <span class="gallery-item__caption" data-i18n="gallery.item3">Pickaxe Lamp</span>
+            </div>
+          </a>
+
+          <a class="gallery-item reveal delay-1"
+             data-src="https://placehold.co/600x800/24221E/B8935A?text=Enderman+Figure"
+             data-caption="Enderman Figure"
+             role="listitem"
+             aria-label="Открыть фото: Enderman Figure">
+            <img
+              src="https://placehold.co/600x800/24221E/B8935A?text=Enderman+Figure"
+              alt="Enderman Figure — фигурка Эндермена"
+              loading="lazy"
+              width="600" height="800"
+            >
+            <div class="gallery-item__overlay" aria-hidden="true">
+              <span class="gallery-item__caption" data-i18n="gallery.item4">Enderman Figure</span>
+            </div>
+          </a>
+
+          <a class="gallery-item reveal delay-2"
+             data-src="https://placehold.co/800x600/24221E/B8935A?text=Steve+Head+Box"
+             data-caption="Steve Head Box"
+             role="listitem"
+             aria-label="Открыть фото: Steve Head Box">
+            <img
+              src="https://placehold.co/800x600/24221E/B8935A?text=Steve+Head+Box"
+              alt="Steve Head Box — шкатулка голова Стива"
+              loading="lazy"
+              width="800" height="600"
+            >
+            <div class="gallery-item__overlay" aria-hidden="true">
+              <span class="gallery-item__caption" data-i18n="gallery.item5">Steve Head Box</span>
+            </div>
+          </a>
+
+          <a class="gallery-item reveal delay-3"
+             data-src="https://placehold.co/800x600/1C1B17/B8935A?text=TNT+Candle"
+             data-caption="TNT Candle"
+             role="listitem"
+             aria-label="Открыть фото: TNT Candle">
+            <img
+              src="https://placehold.co/800x600/1C1B17/B8935A?text=TNT+Candle"
+              alt="TNT Candle — свеча-тнт"
+              loading="lazy"
+              width="800" height="600"
+            >
+            <div class="gallery-item__overlay" aria-hidden="true">
+              <span class="gallery-item__caption" data-i18n="gallery.item6">TNT Candle</span>
+            </div>
+          </a>
+
+          <a class="gallery-item reveal delay-2"
+             data-src="https://placehold.co/1200x600/24221E/B8935A?text=Pixel+Art+Frame"
+             data-caption="Pixel Art Frame"
+             role="listitem"
+             aria-label="Открыть фото: Pixel Art Frame">
+            <img
+              src="https://placehold.co/1200x600/24221E/B8935A?text=Pixel+Art+Frame"
+              alt="Pixel Art Frame — рамка пиксельного арта"
+              loading="lazy"
+              width="1200" height="600"
+            >
+            <div class="gallery-item__overlay" aria-hidden="true">
+              <span class="gallery-item__caption" data-i18n="gallery.item7">Pixel Art Frame</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. APPROACH ==================== -->
+    <section id="approach" class="approach-section section">
+      <div class="container">
+
+        <span class="section-label reveal" data-i18n="approach.label">Наш подход</span>
+
+        <div class="approach-pullquote reveal delay-1">
+          <blockquote data-i18n="approach.quote">
+            Каждая вещь, которую мы создаём, несёт частичку нашей семьи
+          </blockquote>
+          <p class="approach-pullquote__source" data-i18n="approach.source">— warmprint, семейная мастерская</p>
+        </div>
+
+        <div class="approach-body">
+          <p class="reveal" data-i18n="approach.p1">
+            Мы не фабрика. Каждый заказ проходит через наши руки от замысла до упаковки. Мы следим за качеством, потому что нам важна репутация — не выручка за штуку.
+          </p>
+          <p class="reveal delay-1" data-i18n="approach.p2">
+            Материалы выбираем тщательно. Настройки печати — по изделию, не по шаблону. Если что-то не так — переделываем. Это принцип, не исключение.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 5. HOW TO ORDER ==================== -->
+    <section id="how" class="how-section section">
+      <div class="container">
+
+        <div class="how-section__header">
+          <span class="section-label reveal" data-i18n="how.label">Как заказать</span>
+          <h2 class="reveal delay-1" data-i18n="how.title">Три шага</h2>
+        </div>
+
+        <div class="how-steps">
+
+          <div class="how-step reveal">
+            <span class="how-step__num" data-i18n="how.step1_num">01</span>
+            <h3 class="how-step__title" data-i18n="how.step1_title">Напишите нам</h3>
+            <p class="how-step__desc" data-i18n="how.step1_desc">
+              Telegram, Instagram или форма на сайте. Опишите что хотите — фото, идея или просто слова.
+            </p>
+          </div>
+
+          <div class="how-step reveal delay-1">
+            <span class="how-step__num" data-i18n="how.step2_num">02</span>
+            <h3 class="how-step__title" data-i18n="how.step2_title">Обсудим детали</h3>
+            <p class="how-step__desc" data-i18n="how.step2_desc">
+              Уточним размеры, материал, цвет. Если нужно — предложим варианты и покажем примеры.
+            </p>
+          </div>
+
+          <div class="how-step reveal delay-2">
+            <span class="how-step__num" data-i18n="how.step3_num">03</span>
+            <h3 class="how-step__title" data-i18n="how.step3_title">Получите изделие</h3>
+            <p class="how-step__desc" data-i18n="how.step3_desc">
+              Печатаем, проверяем, упаковываем. Самовывоз или доставка — как удобно.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. REVIEWS ==================== -->
+    <section id="reviews" class="reviews-section section">
+      <div class="container">
+
+        <div class="reviews-section__header">
+          <span class="section-label reveal" data-i18n="reviews.label">Отзывы</span>
+          <h2 class="reveal delay-1" data-i18n="reviews.title">Говорят клиенты</h2>
+        </div>
+
+        <div class="reviews-grid">
+
+          <article class="review-card reveal">
+            <p class="review-card__quote" data-i18n="reviews.r1_text">
+              Заказывала вазу под конкретный интерьер — всё учли до миллиметра. Стоит на столе и радует каждый день.
+            </p>
+            <footer class="review-card__author" data-i18n="reviews.r1_name">Анна М.</footer>
+          </article>
+
+          <article class="review-card reveal delay-1">
+            <p class="review-card__quote" data-i18n="reviews.r2_text">
+              Подарил маме фигурку её любимого кота. Она плакала от радости. Спасибо за внимание к деталям.
+            </p>
+            <footer class="review-card__author" data-i18n="reviews.r2_name">Дмитрий К.</footer>
+          </article>
+
+          <article class="review-card reveal delay-2">
+            <p class="review-card__quote" data-i18n="reviews.r3_text">
+              Делали органайзер под заказ — несколько итераций, ни разу не почувствовал раздражения с их стороны. Профессионалы.
+            </p>
+            <footer class="review-card__author" data-i18n="reviews.r3_name">Сергей В.</footer>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. CONTACTS + FORM ==================== -->
+    <section id="contacts" class="contacts-section section">
+      <div class="container">
+
+        <div class="contacts-inner">
+
+          <!-- Left: contacts info -->
+          <div class="contacts-info">
+            <span class="section-label reveal" data-i18n="contacts.label">Контакты</span>
+            <h2 class="contacts-info__title reveal delay-1">
+              <span data-i18n="contacts.title_1">Напишите</span><br>
+              <span class="accent" data-i18n="contacts.title_2">нам</span>
+            </h2>
+
+            <ul class="contacts-list" aria-label="Контактная информация">
+
+              <li class="contacts-item reveal delay-2">
+                <div class="contacts-item__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contacts-item__label" data-i18n="contacts.tg_label">Telegram</div>
+                  <a href="https://t.me/warmprint" class="contacts-item__value" data-i18n="contacts.telegram">@warmprint</a>
+                </div>
+              </li>
+
+              <li class="contacts-item reveal delay-3">
+                <div class="contacts-item__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contacts-item__label" data-i18n="contacts.ig_label">Instagram</div>
+                  <a href="https://instagram.com/warmprint.studio" class="contacts-item__value" data-i18n="contacts.instagram">@warmprint.studio</a>
+                </div>
+              </li>
+
+              <li class="contacts-item reveal delay-4">
+                <div class="contacts-item__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contacts-item__label" data-i18n="contacts.em_label">Email</div>
+                  <a href="mailto:hello@warmprint.studio" class="contacts-item__value" data-i18n="contacts.email">hello@warmprint.studio</a>
+                </div>
+              </li>
+
+            </ul>
+
+            <p class="contacts-note reveal" data-i18n="contacts.note">
+              Отвечаем в течение нескольких часов. Работаем каждый день, без выходных.
+            </p>
+          </div>
+
+          <!-- Right: form -->
+          <div class="contacts-form-panel reveal delay-1">
+
+            <h3 class="form-title" data-i18n="form.title">Оставить заявку</h3>
+
+            <form id="contactForm" novalidate>
+              <div class="form-body">
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="fieldName" data-i18n="form.name_label">Ваше имя</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="fieldName"
+                      name="name"
+                      required
+                      autocomplete="given-name"
+                      data-i18n-placeholder="form.name_ph"
+                      placeholder="Как вас зовут"
+                    >
+                    <span class="form-error">Пожалуйста, введите имя</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="fieldContact" data-i18n="form.contact_label">Контакт</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="fieldContact"
+                      name="contact"
+                      required
+                      autocomplete="email"
+                      data-i18n-placeholder="form.contact_ph"
+                      placeholder="Email, Telegram или WhatsApp"
+                    >
+                    <span class="form-error">Пожалуйста, укажите контакт</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="fieldInterest" data-i18n="form.interest_label">Что интересует</label>
+                  <select class="form-control" id="fieldInterest" name="interest">
+                    <option value="ready"  data-i18n="form.interest_opt1">Готовое изделие</option>
+                    <option value="custom" data-i18n="form.interest_opt2">Идея на заказ</option>
+                    <option value="ask"    data-i18n="form.interest_opt3">Просто хочу спросить</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="fieldMessage" data-i18n="form.message_label">Сообщение</label>
+                  <textarea
+                    class="form-control"
+                    id="fieldMessage"
+                    name="message"
+                    rows="4"
+                    data-i18n-placeholder="form.message_ph"
+                    placeholder="Расскажите подробнее..."
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="align-self: flex-start">
+                  <span data-i18n="form.submit">Отправить</span>
+                </button>
+
+              </div>
+            </form>
+
+            <!-- Success state -->
+            <div class="form-success" id="formSuccess" aria-live="polite">
+              <div class="form-success__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <p class="form-success__title" data-i18n="form.success_title">Заявка принята</p>
+              <p class="form-success__sub"   data-i18n="form.success_sub">Мы свяжемся с вами в ближайшее время</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== 8. FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo">warm<span>print</span></span>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a href="#what"     data-i18n="nav.what">Что мы делаем</a>
+          <a href="#gallery"  data-i18n="nav.gallery">Галерея</a>
+          <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
+        </nav>
+        <p class="footer__copy" data-i18n="footer.copy">2024 warmprint — семейная мастерская</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== LIGHTBOX ==================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр изображения">
+    <div class="lightbox__inner">
+      <button class="lightbox__close" id="lbClose" aria-label="Закрыть">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="1" y1="1" x2="13" y2="13"/>
+          <line x1="13" y1="1" x2="1" y2="13"/>
+        </svg>
+      </button>
+      <div class="lightbox__img-wrap">
+        <img class="lightbox__img" id="lbImg" src="" alt="">
+      </div>
+      <p class="lightbox__caption" id="lbCaption"></p>
+    </div>
+  </div>
+
+  <!-- ==================== SCROLL TOP ==================== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+      <polyline points="2 10 7 4 12 10"/>
+    </svg>
+  </button>
+
+  <!-- JS: translations first, then engine, then app -->
+  <script src="js/lang-ru.js" defer></script>
+  <script src="js/lang-en.js" defer></script>
+  <script src="js/lang-uk.js" defer></script>
+  <script src="js/i18n.js"    defer></script>
+  <script src="js/form.js"    defer></script>
+  <script src="js/app.js"     defer></script>
+
+</body>
+</html>

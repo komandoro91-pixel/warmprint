@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1C1B17"/>
+
+  <!-- Subtle texture lines -->
+  <line x1="0" y1="314" x2="1200" y2="314" stroke="#24221E" stroke-width="1"/>
+  <line x1="600" y1="0" x2="600" y2="630" stroke="#24221E" stroke-width="1"/>
+
+  <!-- Brass accent bar left -->
+  <rect x="80" y="180" width="3" height="270" fill="#B8935A" opacity="0.6"/>
+
+  <!-- eyebrow label -->
+  <text
+    x="104" y="216"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="14"
+    font-weight="400"
+    fill="#B8935A"
+    opacity="0.8"
+    letter-spacing="4">СЕМЕЙНАЯ МАСТЕРСКАЯ · 3D-ПЕЧАТЬ</text>
+
+  <!-- Main wordmark -->
+  <text
+    x="104" y="360"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="140"
+    font-weight="400"
+    fill="#B8935A"
+    letter-spacing="-4">warmprint</text>
+
+  <!-- Em-dash editorial subline -->
+  <text
+    x="104" y="430"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="32"
+    font-weight="300"
+    fill="#C8C0AE"
+    opacity="0.75"
+    letter-spacing="1">— не количество, качество</text>
+
+  <!-- Bottom domain label -->
+  <text
+    x="104" y="540"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="16"
+    font-weight="400"
+    fill="#B8935A"
+    opacity="0.45"
+    letter-spacing="3">warmprint-v2.vercel.app</text>
+</svg>

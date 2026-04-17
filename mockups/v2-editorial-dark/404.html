@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — страница потерялась · warmprint</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #1C1B17;
+      --surface: #24221E;
+      --brass:   #B8935A;
+      --brass-dim: rgba(184,147,90,0.15);
+      --text:    #C8C0AE;
+      --muted:   rgba(200,192,174,0.45);
+      --border:  rgba(184,147,90,0.18);
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Georgia', 'Times New Roman', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--brass);
+      opacity: 0.7;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 10vw, 7rem);
+      font-weight: 300;
+      line-height: 1;
+      color: var(--brass);
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      opacity: 0.55;
+    }
+
+    .sub {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 36ch;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 0.85em 2.2em;
+      background: transparent;
+      border: 1px solid var(--brass);
+      border-radius: 100px;
+      color: var(--brass);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .cta:hover,
+    .cta:focus-visible {
+      background: var(--brass);
+      color: var(--bg);
+      outline: none;
+    }
+
+    .cta:focus-visible {
+      box-shadow: 0 0 0 3px rgba(184,147,90,0.4);
+    }
+
+    .rule {
+      width: 3px;
+      height: 60px;
+      background: linear-gradient(to bottom, transparent, var(--brass), transparent);
+      margin: 3rem auto 2.5rem;
+      opacity: 0.4;
+    }
+
+    .wordmark {
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      opacity: 0.5;
+    }
+
+    .wordmark span { color: var(--brass); opacity: 0.9; }
+  </style>
+</head>
+<body>
+
+  <p class="eyebrow">warmprint · 3D-печать</p>
+
+  <h1>404 — <em>страница</em><br>потерялась</h1>
+
+  <p class="sub">Возможно, адрес изменился или страницы никогда не было. Вернитесь на главную.</p>
+
+  <a href="/" class="cta">Вернуться на главную</a>
+
+  <div class="rule" aria-hidden="true"></div>
+
+  <p class="wordmark">warm<span>print</span></p>
+
+</body>
+</html>
